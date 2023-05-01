@@ -147,4 +147,5 @@ router.get("/get-all-users/:role", authMiddleware, async (req, res) => {
     });
   }
 });
+
 module.exports = router;
