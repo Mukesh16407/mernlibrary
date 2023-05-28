@@ -19,3 +19,15 @@ export const LoginUser = async (payload) => {
     throw error;
   }
 };
+
+// get all users
+export const GetAllUsers = async (role) => {
+  try {
+    return await apiRequest({
+      method: "GET",
+      endPoint: `/api/users/get-all-users/${role}`,
+    });
+  } catch (error) {
+    throw error;
+  }
+};

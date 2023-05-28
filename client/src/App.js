@@ -8,6 +8,7 @@ import "./stylesheets/custom-components.css";
 import "./stylesheets/form-elements.css";
 import { Login } from "./pages/Login/Login,";
 import { Home } from "./pages/Home";
+import { Profile } from "./pages/Profile";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/profile" element={<Profile />} />
       </Routes>
     </div>
   );
