@@ -2,7 +2,6 @@ import apiRequest from "./axiosInstance";
 
 // add book
 export const AddBook = async (payload) => {
-  debugger;
   try {
     return await apiRequest({
       method: "POST",
@@ -43,6 +42,18 @@ export const DeleteBook = async (id) => {
     return await apiRequest({
       method: "DELETE",
       endPoint: `/api/books/delete-book/${id}`,
+    });
+  } catch (error) {
+    throw error;
+  }
+};
+
+// get book by id
+export const GetBookById = async (id) => {
+  try {
+    return await apiRequest({
+      method: "GEE",
+      endPoint: `/api/books/get-book-by-id/${id}`,
     });
   } catch (error) {
     throw error;

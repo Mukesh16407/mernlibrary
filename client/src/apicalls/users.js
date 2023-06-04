@@ -31,3 +31,14 @@ export const GetAllUsers = async (role) => {
     throw error;
   }
 };
+
+export const GetUserById = async (id) => {
+  try {
+    return await apiRequest({
+      method: "GET",
+      endPoint: `/api/users/get-user-by-id/${id}`,
+    });
+  } catch (error) {
+    throw error;
+  }
+};
